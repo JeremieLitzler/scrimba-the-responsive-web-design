@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: #ffe600;
+}
+
+header,
+section {
+  padding: 50px;
+}
+
+header {
+  background: #ffe600;
+  color: #000;
+}
+
+.section-one {
+  background: black;
+  color: white;
+}
+
+.link {
+  color: black;
+}
+
+/* button styles */
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn-accent {
+  background: #ffe600;
+  color: #000;
+}
+
+.btn-accent:hover {
+  background: white;
+}
+
+.btn-dark {
+  background: #000;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #ffe600;
+  color: black;
+}
