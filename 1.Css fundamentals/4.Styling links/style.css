@@ -1,0 +1,51 @@
+.card {
+  background: #000;
+  color: white;
+  width: 560px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.links {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+strong {
+  background: yellow;
+  color: black;
+}
+
+.accent-color {
+  color: yellow;
+  font-weight: bold;
+}
+
+a:link {
+  color: yellow;
+}
+a:visited {
+  color: white;
+}
+a:focus {
+  color: aquamarine;
+}
+a:hover {
+  color: chartreuse;
+}
+a:active {
+  color: plum;
+}
