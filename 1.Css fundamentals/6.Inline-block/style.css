@@ -1,0 +1,44 @@
+.card {
+  background: #000;
+  color: white;
+  width: 560px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: #ffe600;
+}
+
+a:hover,
+a:focus {
+  background-color: #f66f00;
+}
+.accent-color {
+  color: #ffe600;
+}
+
+.links {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.btn {
+  background-color: #ffe600;
+  color: #000;
+  display: inline-block;
+  padding: 16px;
+}
