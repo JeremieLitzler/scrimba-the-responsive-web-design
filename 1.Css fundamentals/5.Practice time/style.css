@@ -51,3 +51,7 @@ a:focus {
   font-weight: bold;
   text-decoration: underline;
 }
+
+.read-more {
+  margin-bottom: 0;
+}
