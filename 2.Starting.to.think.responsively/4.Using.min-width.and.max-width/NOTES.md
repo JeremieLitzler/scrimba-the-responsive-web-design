@@ -1,6 +1,7 @@
 # Notes
 
 - Try to use `max-width` to set a max size for the content container.
+- Better than using width so images never goes bigger than the image size
 - Here is a snippet for the container pattern:
 
 ```css

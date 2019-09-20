@@ -1,55 +1,62 @@
-.card {
-  background: #000;
-  color: white;
-  width: 560px;
-  margin: 0 auto;
-  padding: 45px;
+body {
+  font-size: 1.125rem;
+  color: #707070;
+  margin: 0;
 }
 
-h1,
-p {
-  margin-top: 0;
-}
+/* Typography */
 
 h1 {
-  font-size: 24px;
-}
-
-p {
-  font-size: 18px;
-}
-
-a {
-  color: black;
-}
-
-.button {
-  display: inline-block;
-  background: #ffe600;
-  color: black;
-  padding: 0.5em 1.2em;
+  font-size: 3rem;
+  color: #212614;
   text-align: center;
-  text-decoration: none;
-  margin-bottom: 50px;
 }
 
-.button:hover {
-  background: orange;
+h1 span {
+  color: #b7832f;
 }
 
-.btn-big {
+h2 {
   font-size: 1.5rem;
 }
 
-.btn-small {
-  font-size: 0.75rem;
-}
-
-.accent-color {
-  color: #ffe600;
-}
-
-.links {
+p {
   margin-top: 0;
-  margin-bottom: 0;
+}
+
+/*  Layout  */
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1em 0;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.col-3 {
+  flex: 3;
+}
+
+.col-bg {
+  background: #212614;
+  color: #fff;
+  padding: 1em;
 }
