@@ -1,5 +1,7 @@
 # Notes
 
+- The children of a flex element have a width equal to the content.
+- To set a width, use the percentage unit.
 - `em` can also be relative in the element itself
 
 Example:
