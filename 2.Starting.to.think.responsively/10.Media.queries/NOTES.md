@@ -1,20 +1,15 @@
 # Notes
 
-- `em` can also be relative in the element itself
-
-Example:
+- When using media queries for breakpoints, you don't need to specify the media type is it all.
 
 ```css
-.btn {
-  /* changing the font-size will affect relatively the padding */
-  padding: 0.5em 1.2em;
+@media all and (min-width: 400px) {
 }
+```
 
-.btn-big {
-  font-size: 1.5rem;
-}
+is the same as :
 
-.btn-small {
-  font-size: 0.75rem;
+```css
+@media (min-width: 400px) {
 }
 ```
