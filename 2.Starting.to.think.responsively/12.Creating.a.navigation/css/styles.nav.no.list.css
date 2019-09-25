@@ -1,0 +1,16 @@
+/*  Fonts
+    -----
+    font-family: 'Lora', serif;
+    font-family: 'Ubuntu', sans-serif;
+ */
+
+header {
+  text-align: center;
+}
+
+a {
+  margin: 0 1em;
+}
+
+a:hover {
+}
