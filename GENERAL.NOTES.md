@@ -6,4 +6,4 @@
 
 ## About CSS
 
--
+- Use round value when using `em` as much as you can.
