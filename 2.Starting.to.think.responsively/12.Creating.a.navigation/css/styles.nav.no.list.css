@@ -28,11 +28,27 @@ h1 {
   margin: 0;
 }
 
+/* =================
+Layout
+================= */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 header {
-  text-align: center;
   background: #f8f8f8;
   padding: 2em 0;
 }
+
+/* navigation */
 
 nav {
   margin-top: 1em;
@@ -41,7 +57,7 @@ a {
   text-decoration: none;
   color: #707070;
   font-weight: 700;
-  margin: 0 1em;
+  margin-left: 2em;
   padding: 0.25em 0;
 }
 
