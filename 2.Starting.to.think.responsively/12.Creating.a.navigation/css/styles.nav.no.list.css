@@ -43,6 +43,12 @@ Layout
   justify-content: space-between;
 }
 
+@media (max-width: 675px) {
+  .container-nav {
+    flex-direction: column;
+  }
+}
+
 header {
   background: #f8f8f8;
   padding: 2em 0;
@@ -53,6 +59,7 @@ header {
 nav {
   margin-top: 1em;
 }
+
 a {
   text-decoration: none;
   color: #707070;
@@ -66,9 +73,19 @@ a:focus {
   color: #1792d2;
 }
 .current-page {
+  padding-bottom: 0.25em;
   border-bottom: 1px solid #707070;
 }
 
 .current-page:hover {
   color: #707070;
+}
+
+@media (max-width: 675px) {
+  a {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em;
+  }
 }
