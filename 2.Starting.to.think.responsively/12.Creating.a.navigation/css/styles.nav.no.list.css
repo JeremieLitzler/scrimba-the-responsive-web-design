@@ -43,7 +43,7 @@ Layout
   justify-content: space-between;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 685px) {
   .container-nav {
     flex-direction: column;
   }
@@ -81,7 +81,7 @@ a:focus {
   color: #707070;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 685px) {
   a {
     text-align: center;
     display: block;

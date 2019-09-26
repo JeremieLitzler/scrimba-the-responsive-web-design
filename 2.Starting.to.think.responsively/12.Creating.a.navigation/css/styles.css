@@ -43,7 +43,7 @@ Layout
   justify-content: space-between;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 685px) {
   .container-nav {
     flex-direction: column;
   }
@@ -64,7 +64,7 @@ nav ul {
   justify-content: center;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 685px) {
   nav ul {
     flex-direction: column;
     text-align: center;
@@ -75,7 +75,7 @@ nav li {
   margin-left: 2em;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 685px) {
   nav li {
     margin: 0;
     padding: 0.5em;
