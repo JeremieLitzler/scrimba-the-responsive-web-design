@@ -1,5 +1,13 @@
 # Notes
 
+## Meta `viewport` and `charset`
+
+Always include this line in the `<head>`:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
 ## Building the HTML
 
 - Use a `header` to start the body.
