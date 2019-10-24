@@ -1,7 +1,7 @@
 # Notes
 
 - The value of `line-height` means: "take my `font-size` and add spacing on top and bottom of the text".
-- A value between 1.5 and 1.6. Default is 1.4.
+- A value between 1.5 and 1.6 is recommended on the `body`. Default is 1.4.
 
 Ex:
 

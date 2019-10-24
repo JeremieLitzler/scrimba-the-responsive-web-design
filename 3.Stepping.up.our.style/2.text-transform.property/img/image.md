@@ -1,0 +1,1 @@
+https://via.placeholder.com/1280x240.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide%20C/O%20https://placeholder.com/#How_To_Use_Our_Placeholders
