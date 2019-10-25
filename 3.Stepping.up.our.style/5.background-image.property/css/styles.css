@@ -4,7 +4,19 @@ h1 {
   color: white;
 }
 
-.cat {
+.pattern {
   background-image: url(../img/circle-blues.png);
   padding: 200px;
+}
+
+.image {
+  background-image: url(../img/deco.jpg);
+  background-size: contain;
+  padding: 150px;
+}
+.image-pos {
+  background-image: url(../img/deco.jpg);
+  background-size: cover;
+  background-position: center right;
+  padding: 150px;
 }
