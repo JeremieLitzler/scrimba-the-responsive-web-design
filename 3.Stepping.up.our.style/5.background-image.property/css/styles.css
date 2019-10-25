@@ -1,0 +1,10 @@
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.cat {
+  background-image: url(../img/circle-blues.png);
+  padding: 200px;
+}
