@@ -1,0 +1,233 @@
+/*  Fonts
+-----
+font-family: 'Source sans', serif;
+*/
+
+/* Colors :
+    #F18119
+    #404040
+    #FFF
+    Gradient : FF713B > FFA51D
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  min-width: 320px;
+  color: #404040;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-full {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2em;
+}
+
+/* =================
+Typography
+================= */
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 2em 1.25em;
+  color: white;
+}
+h2 {
+  font-size: 1.3125rem;
+}
+
+p,
+label {
+  color: #5a5a5a;
+}
+
+p {
+  padding: 0 1em;
+}
+
+label,
+input,
+button {
+  width: 75%;
+  margin: 0 auto;
+}
+
+input,
+button {
+  text-align: center;
+  line-height: 2em;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
+}
+
+input {
+  border: 1px #818181 solid;
+}
+
+button {
+  border: none;
+  appearance: none;
+}
+
+.btn:hover,
+input:hover,
+a:hover {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(155, 67, 9), 0 0 0 0.3rem hsla(55, 68%, 83%, 0.75);
+}
+.btn:focus,
+input:focus,
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px hsla(10, 52%, 42%, 1),
+    0 0 0 0.3rem hsla(55, 72%, 83%, 0.75);
+}
+
+strong {
+  font-weight: 900;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+.color-accent {
+  color: #f18119;
+  font-weight: 900;
+}
+
+.theme-gradient {
+  color: white;
+  background: transparent
+    linear-gradient(270deg, #ff895d 0%, #df4e13 0%, #ffa51d 100%) 0% 0%
+    no-repeat padding-box;
+}
+/* hero */
+
+.blur {
+  background: white 0% 0% no-repeat padding-box;
+  opacity: 0.8;
+  backdrop-filter: blur(8px);
+}
+.hero {
+  background-color: #404040;
+  background-image: url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.hero-action {
+  font-size: 1.3125rem;
+  text-decoration: none;
+  border-radius: 0.25em;
+  margin-bottom: 0;
+}
+
+.hero-brand {
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+}
+.hero-brand-top {
+  margin-bottom: 1em;
+}
+
+/* forms */
+
+.register-title {
+  margin: 2em 0 0;
+}
+.register-accent {
+  margin: 0;
+}
+
+/* others */
+.fine-print {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+/* =================
+Layout
+================= */
+/* generic styles */
+
+/* generic elements */
+
+@media (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero {
+    width: 60%;
+  }
+
+  .register {
+    width: 40%;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    width: 60%;
+  }
+  .hero-titles {
+  }
+
+  .register {
+    width: 40%;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+/* navigation */
+
+/* hero */
+
+.hero-brand {
+  order: -1;
+  margin: 0 auto;
+}
+.hero-brand-top {
+  padding: 4px;
+  display: block;
+}
+
+/* register */
+form {
+  display: flex;
+  flex-direction: column;
+}
