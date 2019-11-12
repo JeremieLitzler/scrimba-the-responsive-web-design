@@ -56,3 +56,12 @@ Default example:
   /* padding and border are included in the width of 200px, e.g. element 200-30-10=170px */
 }
 ```
+
+## Properties `align-items` and `justify-content`
+
+**Be careful** when using `align-items`: the alignement happens on the cross axis.
+
+If `flex-direction` is row, the cross axis is **top to bottom**. So `align-items` will align items in the middle of the total height of the flex element.
+
+If `flex-direction` is column, the cross axis is **left ot right**. So `align-items` will align items in the middle of the total width of the flex element.
+Using `justify-content` will however align the items in the middle of the total height of the flex element.
