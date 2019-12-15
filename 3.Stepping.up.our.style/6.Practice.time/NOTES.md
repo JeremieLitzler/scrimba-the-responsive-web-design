@@ -65,3 +65,36 @@ If `flex-direction` is row, the cross axis is **top to bottom**. So `align-items
 
 If `flex-direction` is column, the cross axis is **left ot right**. So `align-items` will align items in the middle of the total width of the flex element.
 Using `justify-content` will however align the items in the middle of the total height of the flex element.
+
+## CSS Gradient
+
+```css
+/* to destination, color start, color stop */
+.box-1 { background-image: linear-gradient(to bottom right, red,        blue); }
+/* degree orientation, color start, color stop */
+.box-2 { background-image: linear-gradient(0deg, green, yellow)}
+/* degree orientation, color start for x %, color stop */
+.box-3 { background-image: linear-gradient(90deg, orange 75%, teal) }
+/* degree orientation, color1 start at 0, color1 stop at x %, color2 start at x %, color2 stop at y %, etc...  */
+.box-4 { background-image: linear-gradient(90deg, orange,
+                                                              orange 10%,
+                                                              teal 10%,
+                                                              teal 20%,
+                                                              orange 20%,
+                                                              orange 30%,
+                                                              teal 30%,
+                                                              teal 40%,
+                                                              orange 40%) }
+/* start color, stop color */
+.box-5 { background-image: radial-gradient(red, blue);
+```
+
+## Transition property
+
+- Set the `transition` property on the non hover rule to effect the hover and non hover state.
+- Keep the hover effects between 250ms and 500ms.
+- You can't transition everything: [MDN site](https://developer.mozilla.org/fr/docs/Web/CSS/transition)
+
+## Transform
+
+- `scale`

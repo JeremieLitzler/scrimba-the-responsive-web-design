@@ -77,18 +77,8 @@ button {
 
 input {
   border: 1px #818181 solid;
-}
-
-button {
-  border: none;
-  appearance: none;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: color 500ms;
-}
-
-button:hover {
-  color: #000;
+  transform: scale(1);
+  transition: transform 500ms;
 }
 
 .btn:hover,
@@ -100,9 +90,23 @@ a:hover {
 .btn:focus,
 input:focus,
 a:focus {
+  transform: scale(1);
   outline: none;
   box-shadow: 0 0 0 1px hsla(10, 52%, 42%, 1),
     0 0 0 0.3rem hsla(55, 72%, 83%, 0.75);
+}
+
+button {
+  border: none;
+  appearance: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 500ms;
+}
+
+button:hover, button:focus {
+  transform: scale(1.1);
 }
 
 strong {
