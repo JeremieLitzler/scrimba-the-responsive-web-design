@@ -39,7 +39,7 @@ img {
 }
 
 /* =================
-Typography
+Start typography
 ================= */
 
 h1,
@@ -64,13 +64,6 @@ label {
 
 p {
   padding: 0 1em;
-}
-
-label,
-input,
-button {
-  width: 75%;
-  margin: 0 auto;
 }
 
 input,
@@ -130,21 +123,6 @@ strong {
   backdrop-filter: blur(8px);
 }
 
-.hero > *,
-.register > * {
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero {
-  background-color: #404040;
-  background-image: url(images/hero.jpg);
-  background-position: center;
-  background-size: cover;
-  justify-content: space-between;
-  min-height: 50vh;
-}
 .hero-action {
   font-size: 1.3125rem;
   text-decoration: none;
@@ -163,10 +141,10 @@ strong {
 /* forms */
 
 .register-title {
-  margin: 2em 0 0;
+  margin: 0 auto;
 }
 .register-accent {
-  margin: 0;
+  margin: 0 auto;
 }
 
 /* others */
@@ -175,10 +153,51 @@ strong {
   text-align: center;
 }
 
+@media (min-width: 800px) {
+
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .hero-action {
+    font-size: 1.5em
+  }
+  .hero-brand {
+    font-size: 0.625em;
+  }
+}
+/* =================
+End typography
+================= */
+
 /* =================
 Layout
 ================= */
 /* generic styles */
+label,
+input,
+button {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.hero > *,
+.register > * {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  background-color: #404040;
+  background-image: url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+  min-height: 50vh;
+}
 
 /* generic elements */
 
