@@ -45,6 +45,7 @@ Start typography
 h1,
 h2 {
   margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -139,12 +140,8 @@ strong {
 }
 
 /* forms */
-
-.register-title {
-  margin: 0 auto;
-}
-.register-accent {
-  margin: 0 auto;
+button {
+  margin-top: 1em;
 }
 
 /* others */
@@ -166,6 +163,13 @@ strong {
   }
   .hero-brand {
     font-size: 0.625em;
+  }
+
+  .register-title {
+    font-size: 1.75em;
+  }
+  .register-accent {
+    margin-top: 0;
   }
 }
 /* =================
