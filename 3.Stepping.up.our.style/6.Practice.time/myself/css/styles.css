@@ -82,6 +82,13 @@ input {
 button {
   border: none;
   appearance: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 500ms;
+}
+
+button:hover {
+  color: #000;
 }
 
 .btn:hover,
@@ -112,9 +119,7 @@ strong {
 
 .theme-gradient {
   color: white;
-  background: transparent
-    linear-gradient(270deg, #ff895d 0%, #df4e13 0%, #ffa51d 100%) 0% 0%
-    no-repeat padding-box;
+  background: linear-gradient(to left, #ff713b, #ffa51d);
 }
 /* hero */
 
@@ -139,7 +144,13 @@ strong {
   margin-bottom: 1em;
 }
 
-/* forms */
+/* form */
+
+label,
+input,
+button {
+  width: 100%;
+}
 button {
   margin-top: 1em;
 }
@@ -180,12 +191,6 @@ End typography
 Layout
 ================= */
 /* generic styles */
-label,
-input,
-button {
-  width: 75%;
-  margin: 0 auto;
-}
 
 .hero > *,
 .register > * {

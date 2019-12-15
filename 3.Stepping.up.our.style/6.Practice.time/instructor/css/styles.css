@@ -6,15 +6,16 @@
 
 body {
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif; 
   font-size: 1rem;
   color: #404040;
   text-align: center;
 }
 
+
 /* =================
-   Typography 
-   ================= */
+ Typography 
+ ================= */
 
 h1 {
   font-size: 2.25rem;
@@ -24,7 +25,7 @@ h1 {
 }
 
 h1 + p {
-  color: #f18119;
+  color: #F18119;
   font-weight: 900;
   font-size: 1.3125rem;
   text-transform: uppercase;
@@ -38,14 +39,14 @@ h2 {
 
 h2 + p {
   font-weight: 900;
-  color: #f18119;
+  color: #F18119;
   margin-top: 0;
   text-transform: uppercase;
 }
 
 .top-text {
   font-size: 0.625rem;
-  color: #f18119;
+  color: #F18119;
   font-weight: 900;
   text-transform: uppercase;
   order: -1;
@@ -56,33 +57,35 @@ h2 + p {
   letter-spacing: 1px;
 }
 
-strong {
-  font-weight: 900;
-}
+strong { font-weight: 900; }
+
 
 /* =================
-   Intro section 
-   ================= */
-
+ Intro section 
+ ================= */
+ 
 .intro {
   background-image: url(images/dark-ribs.jpg);
   background-size: cover;
   background-color: #404040;
   background-position: center;
-  padding: 0 0.5em 2em;
+  padding: 0 .5em 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 50vh;
 }
 
-/* =================
-   main-content section 
-   ================= */
 
+/* =================
+ main-content section 
+ ================= */
+ 
 .main-content {
   padding: 2em 1em;
 }
+
+
 
 .intro > *,
 .main-content > * {
@@ -91,10 +94,11 @@ strong {
   margin-right: auto;
 }
 
-/* =================
-   form
-   ================= */
 
+/* =================
+ form
+ ================= */
+ 
 .email-collector {
   width: 80%;
   max-width: 300px;
@@ -109,39 +113,50 @@ input,
 input {
   font-family: inherit;
   text-align: inherit;
-  margin-bottom: 0.75em;
-  padding: 0.25em;
+  margin-bottom: .75em;
+  padding: .25em;
   border: 1px solid #404040;
 }
 
-/* =================
-   media queries 
-   ================= */
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
 
+/* =================
+ media queries 
+ ================= */
+ 
 @media (min-width: 500px) {
   body {
-    font-size: 1.125rem;
-    display: flex;
+      font-size: 1.125rem;
+      display: flex;
   }
-
+  
   h1 {
-    font-size: 3.5rem;
+      font-size: 3.5rem;
   }
-
+  
   h2,
   h1 + p {
-    font-size: 1.75rem;
+      font-size: 1.75rem;
   }
-
+  
   .intro,
   .main-content {
-    width: 50%;
-    min-height: 100vh;
+      width: 50%;
+      min-height: 100vh;
   }
-
+  
   .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
   }
 }
