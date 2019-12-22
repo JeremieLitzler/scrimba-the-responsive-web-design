@@ -68,6 +68,8 @@ Using `justify-content` will however align the items in the middle of the total 
 
 ## CSS Gradient
 
+**IMPORTANT:** always set a fallback to a gradient, like `background-color`. Not all browsers support it and you may have forgotten the browser specific prefix ;)
+
 ```css
 /* to destination, color start, color stop */
 .box-1 { background-image: linear-gradient(to bottom right, red,        blue); }
@@ -97,4 +99,30 @@ Using `justify-content` will however align the items in the middle of the total 
 
 ## Transform
 
-- `scale`
+- `scale` needs to be set on 2 css selectors to work.
+- It works well with the `transition` property.
+
+Ex:
+
+```css
+input {
+  transform: scale(1);
+  transition: transform 500ms;
+}
+
+input:hover,
+input:focus {
+  transform: scale(1.1);
+}
+```
+
+## `background-blend-mode` property
+
+Support: [follow this caniuse link](https://caniuse.com/#search=background-blend-mode)
+MDN: [follow this link](https://developer.mozilla.org/fr/docs/Web/CSS/background-blend-mode)
+
+- Most used values are (usually): `multiply`, `screen` and `overlay`.
+
+### Visual guide to blend modes
+
+[Follow this link](https://www.slrlounge.com/workshop/the-ultimate-visual-guide-to-understanding-blend-modes/)

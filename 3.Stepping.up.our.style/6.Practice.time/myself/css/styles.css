@@ -84,13 +84,14 @@ input {
 .btn:hover,
 input:hover,
 a:hover {
+  transform: scale(1.1);
   outline: none;
   box-shadow: 0 0 0 1px rgb(155, 67, 9), 0 0 0 0.3rem hsla(55, 68%, 83%, 0.75);
 }
 .btn:focus,
 input:focus,
 a:focus {
-  transform: scale(1);
+  transform: scale(1.1);
   outline: none;
   box-shadow: 0 0 0 1px hsla(10, 52%, 42%, 1),
     0 0 0 0.3rem hsla(55, 72%, 83%, 0.75);
@@ -105,7 +106,8 @@ button {
   transition: transform 500ms;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   transform: scale(1.1);
 }
 
@@ -123,6 +125,7 @@ strong {
 
 .theme-gradient {
   color: white;
+  background-color: #f18119; /*default in case gradient isn't supported */
   background: linear-gradient(to left, #ff713b, #ffa51d);
 }
 /* hero */
@@ -137,19 +140,24 @@ strong {
   font-size: 1.3125rem;
   text-decoration: none;
   border-radius: 0.25em;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .hero-brand {
   font-size: 0.5rem;
-  letter-spacing: 2px;
-}
-.hero-brand-top {
-  margin-bottom: 1em;
+  /* letter-spacing: 1px; */
 }
 
 /* form */
-
+.register-title {
+  margin-top: 1rem;
+}
+.register-accent {
+  margin-top: 0;
+}
+label {
+  text-align: left;
+}
 label,
 input,
 button {
@@ -157,16 +165,17 @@ button {
 }
 button {
   margin-top: 1em;
+  margin-bottom: 0;
 }
 
 /* others */
 .fine-print {
   font-size: 0.625rem;
+  margin: 0;
   text-align: center;
 }
 
 @media (min-width: 800px) {
-
   h1 {
     font-size: 3.5em;
   }
@@ -174,7 +183,7 @@ button {
     font-size: 2em;
   }
   .hero-action {
-    font-size: 1.5em
+    font-size: 1.5em;
   }
   .hero-brand {
     font-size: 0.625em;
@@ -184,7 +193,6 @@ button {
     font-size: 1.75em;
   }
   .register-accent {
-    margin-top: 0;
   }
 }
 /* =================
@@ -196,16 +204,16 @@ Layout
 ================= */
 /* generic styles */
 
-.hero > *,
-.register > * {
+section > * {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero {
-  background-color: #404040;
-  background-image: url(images/hero.jpg);
+  background-image: url(images/hero.jpg),
+    linear-gradient(45deg, #404040, #606060);
+  background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
   justify-content: space-between;
@@ -254,7 +262,7 @@ Layout
   margin: 0 auto;
 }
 .hero-brand-top {
-  padding: 4px;
+  padding: 3px;
   display: block;
 }
 
