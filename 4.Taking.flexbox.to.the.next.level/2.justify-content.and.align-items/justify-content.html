@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #2C73D2;
+            color: #fff;
+            text-align: center;
+        }
+
+        .actions {
+            padding: 1em;
+        }
+
+        button:hover,
+        button:focus {
+            border: 0;
+            outline: none;
+            color: #fff;
+            background-color: #424656;
+        }
+
+        .flex-container {
+            border: 10px solid #F9F871;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: .25em;
+
+            display: flex;
+        }
+
+        .jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-space-between {
+            justify-content: space-between;
+        }
+
+        .jc-space-between {
+            justify-content: space-between;
+        }
+
+        .jc-space-around {
+            justify-content: space-around;
+        }
+
+        .jc-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .flex-row {
+            flex-direction: row;
+
+        }
+
+        .flex-col {
+            flex-direction: column;
+
+        }
+
+        .flex-col {
+            flex-direction: column;
+
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+
+        }
+
+        .flex-col-reverse {
+            flex-direction: column-reverse;
+
+        }
+
+        .flex-item {
+            background: #8BEE86;
+            margin: .5em;
+            padding: .5em;
+            color: #424656;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Understanding flexbox!</h1>
+    <section class="actions">
+        <button>flex-start</button>
+        <button>flex-end</button>
+        <button>center</button>
+        <button>space-around</button>
+        <button>space-between</button>
+        <button>space-evenly</button>
+    </section c>
+    <div class="flex-container flex-row">
+        <div class="flex-item">flex item 1</div>
+        <div class="flex-item">flex item 2</div>
+        <div class="flex-item">flex item 3</div>
+        <div class="flex-item">flex item 4</div>
+        <div class="flex-item">flex item 5</div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll("button");
+        console.log(buttons);
+        buttons.forEach(button => {
+            console.log(button);
+            button.addEventListener("click", (e) => {
+                console.log("Selected:", button.innerText);
+                var flexContainer = document.querySelector(".flex-container");
+                console.log("flexContainer.classList before: ", flexContainer.classList);
+                flexContainer.className = `flex-container flex-row jc-${button.innerText}`;
+                console.log("flexContainer.classList after: ", flexContainer.classList);
+            });
+        });
+    </script>
+</body>
+
+</html>
