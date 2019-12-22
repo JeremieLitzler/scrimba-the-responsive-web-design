@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2c73d2;
+  color: #fff;
+  text-align: center;
+}
+
+.flex-container {
+  border: 10px solid #f9f871;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.25em;
+}
+
+.flex-item {
+  background: #8bee86;
+  margin: 0.5em;
+  padding: 0.5em;
+  color: #424656;
+}
