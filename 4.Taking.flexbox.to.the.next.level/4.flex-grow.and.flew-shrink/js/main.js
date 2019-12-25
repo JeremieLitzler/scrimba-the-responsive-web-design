@@ -17,7 +17,8 @@ function setListenInputChange(element) {
     }
 
     var flexItem = document.querySelector(`.${buttonSelect.innerText}`);
-    flexItem.style = `${element.title}: ${element.value};background-color:pink;`;
+    const inlineCss = `${element.title}: ${element.value};background-color:pink;`;
+    flexItem.style = inlineCss;
   });
 }
 
