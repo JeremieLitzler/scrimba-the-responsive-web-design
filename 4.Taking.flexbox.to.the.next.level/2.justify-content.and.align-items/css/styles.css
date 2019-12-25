@@ -9,11 +9,96 @@ body {
   text-align: center;
 }
 
+.actions {
+  padding: 1em;
+}
+
+button {
+  border: 0;
+  outline: none;
+}
+button:hover,
+button:focus {
+  color: #fff;
+  background-color: #424656;
+}
+
+.selected {
+  background-color: darkblue;
+  color: white;
+}
 .flex-container {
   border: 10px solid #f9f871;
-  max-width: 600px;
+  max-width: 80vw;
+  min-height: 50vh;
   margin: 0 auto;
   padding: 0.25em;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.jc-flex-start {
+  justify-content: flex-start;
+}
+
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.jc-space-evenly {
+  justify-content: space-evenly;
+}
+
+.ai-stretch {
+  align-items: stretch;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-flex-end {
+  align-items: flex-end;
+}
+
+.ai-flex-start {
+  align-items: flex-start;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.fd-column-reverse {
+  flex-direction: column-reverse;
 }
 
 .flex-item {
