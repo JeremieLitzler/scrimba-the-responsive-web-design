@@ -1,7 +1,6 @@
 # Notes
 
-- `flex-grow` defines how fast the flex item **grows**.
-- `flex-shrink` defines how fast the flex item **shrinks**.
-- `flex-grow` to **0** will **never** make the flex item **grow**.
-- `flex-shrink` to **0** will **never** make the flex item **shrink**.
-- `flex-shrink` defaults to 1.
+- `flex-basis` always look at the main axis, so:
+  - when `flex-direction: row`, the value of `flex-basis` will be equivalent to the width.
+  - when `flex-direction: column`, the value of `flex-basis` will be equivalent to the height.
+- **IMPORTANT**: `min-width` and `max-width` will prevent `flex-basis` to work!
