@@ -16,6 +16,8 @@ body {
   padding: 0.25em;
 
   display: flex;
+  align-items: flex-start;
+  height: 50vh;
 }
 
 .flex-item {
@@ -29,10 +31,13 @@ body {
 
 .flex-item-1 {
   background: plum;
+  align-self: stretch;
 }
 
 .flex-item-2 {
+  /* default => flex-start inherited from the flex container */
 }
 
 .flex-item-3 {
+  align-self: flex-end;
 }
