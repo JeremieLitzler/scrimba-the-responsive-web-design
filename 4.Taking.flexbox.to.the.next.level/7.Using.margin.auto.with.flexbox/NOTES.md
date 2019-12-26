@@ -1,3 +1,5 @@
 # Notes
 
-- `align-self` is used on the individual flex item of a flew container.
+- Margins work very differently in a flex container
+  - First, margin don't collapse anymore.
+  - `margin: auto` in a flex item will align horizontally the item.
