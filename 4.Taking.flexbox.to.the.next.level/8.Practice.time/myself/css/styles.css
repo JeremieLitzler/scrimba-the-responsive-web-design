@@ -1,0 +1,40 @@
+/*  Fonts
+-----
+font-family: 'Source sans Pro', serif;
+*/
+
+/* Colors :
+    #F18119
+    #404040
+    #FFF
+    Gradient : FF713B > FFA51D
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  min-width: 300px;
+  color: #ffffff;
+  background-color: #111d4a;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.theme-color {
+  color: #05cbe9;
+}
+.theme-bg {
+  background-color: #05cbe9;
+}
