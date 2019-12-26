@@ -20,8 +20,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1;
   min-width: 300px;
   color: #ffffff;
   background-color: #111d4a;
@@ -32,9 +31,98 @@ img {
   display: block;
 }
 
-.theme-color {
+.theme-color-light {
   color: #05cbe9;
 }
-.theme-bg {
+.theme-bg-light {
   background-color: #05cbe9;
 }
+.theme-color-dark {
+  color: #111d4a;
+}
+
+/* Typography */
+h1 {
+  font-size: 1.625em;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  font-weight: 900;
+  margin: 0;
+}
+
+.excerpt {
+  margin: 2em;
+}
+
+.read-time {
+  margin-top: 4em;
+  margin-bottom: 0;
+}
+.read-time-value {
+  font-size: 2em;
+  font-weight: 900;
+}
+.btn {
+  border-radius: 2px;
+  padding: 0.5em 2em;
+  transform: scale(1);
+  transition: transform 500ms;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: scale(1.1);
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(59, 37, 255),
+    0 0 0 0.3rem hsla(216, 100%, 79%, 0.75);
+}
+/* End Typography */
+
+/* Layout */
+.splash {
+  max-width: 800px;
+  margin: 0 auto;
+}
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  article {
+    flex-direction: row;
+  }
+
+  .feature-image {
+    width: 40vw;
+    height: 100vh;
+  }
+  .excerpt {
+    width: 60vw;
+  }
+}
+
+.feature-image {
+  object-fit: cover;
+  max-height: 40vh;
+}
+
+.excerpt-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.read-time {
+  flex: 1;
+}
+.read-more {
+  flex-shrink: 0;
+}
+/* End Layout */
