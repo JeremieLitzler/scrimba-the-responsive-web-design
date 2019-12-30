@@ -116,7 +116,9 @@ article {
 
 .card-image {
   object-fit: cover;
-  max-height: 40vh;
+  flex-basis: 200px;
+  min-width: 0;
+  min-height: 0;
 }
 
 .card-excerpt-footer {
