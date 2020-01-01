@@ -5,3 +5,7 @@
 ![Height in a row](img/Image-005.png)
 
 By default, grid items stretch!
+
+The properties `align-items`, `justify-items` and `align-self` in Grid work very much like `align-items`, `justify-content` and `align-self`in Flexbox.
+
+See [demo](index.html).
