@@ -113,17 +113,17 @@ hr {
 /* Layout */
 article {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
-
+/*  */
 .card-tile {
   max-width: 800px;
   margin-bottom: 2rem;
 }
 .card-image {
   object-fit: cover;
-  flex-basis: 30vh;
+  /* flex-basis: 30vh; */
   min-width: 0;
   min-height: 0;
 }
@@ -132,23 +132,23 @@ article {
   height: auto;
 }
 .card-tile .card-excerpt {
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .card-excerpt-footer {
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-end; */
 }
 .read-time {
-  flex: 1;
+  /* flex: 1; */
 }
 .read-more {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
 @media (min-width: 600px) {
   article {
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   .card-image {
@@ -157,9 +157,9 @@ article {
   }
   .card-excerpt {
     width: 60vw;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
   }
 }
 
@@ -177,7 +177,7 @@ article {
   }
 
   .card-tile .card-image {
-    flex-basis: 300px;
+    /* flex-basis: 300px; */
   }
   .card-hero .card-excerpt {
     background-color: #111d4a;
