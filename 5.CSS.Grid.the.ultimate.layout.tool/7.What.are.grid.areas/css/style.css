@@ -7,6 +7,26 @@
     "sidebar footer footer";
 }
 
+.grid-responsive {
+  display: grid;
+  grid-template-columns: 2rem auto 2rem;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    ". sidebar ."
+    "footer footer footer";
+}
+
+@media (min-width: 600px) {
+  .grid-responsive {
+    grid-template-columns: 100px 300px 100px 100px;
+    grid-template-areas:
+      "header header header header"
+      ". content sidebar ."
+      "footer footer footer footer";
+  }
+}
+
 .header {
   grid-area: header;
 }
