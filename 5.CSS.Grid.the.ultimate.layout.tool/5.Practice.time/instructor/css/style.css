@@ -12,7 +12,7 @@ body {
   max-width: 800px;
   background: #111d4a;
   color: #fff;
-  grid-template: 200px auto auto 100px / auto auto;
+  grid-template: 200px 1em auto auto 100px 1em / 1em auto auto 1em;
 }
 
 .card-img {
@@ -32,14 +32,16 @@ body {
   color: #05cbe9;
   font-size: 1.75rem;
   margin: 0;
-  grid-column: 1 / -1;
+  grid-column: 2 / -2;
+  grid-row: 3;
 }
 
 .card-body {
   font-size: 1rem;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
-  grid-column: 1 / -1;
+  grid-column: 2 / -2;
+  grid-row: 4;
 }
 
 .card-btn {
@@ -52,6 +54,8 @@ body {
   letter-spacing: 1px;
   align-self: end;
   justify-self: end;
+  grid-row: 5;
+  grid-column: 3;
 }
 
 .card-read-time {
@@ -59,10 +63,41 @@ body {
   opacity: 0.6;
   line-height: 1;
   align-self: end;
+  grid-row: 5;
+  grid-column: 2;
 }
 
 .card-read-time span {
   font-weight: 700;
   display: block;
   font-size: 1.25em;
+}
+
+@media (min-width: 600px) {
+  .card {
+    grid-template: 1em auto auto 150px 1em / 200px auto auto 1em;
+  }
+
+  .card-img {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+  }
+
+  .card-title {
+    grid-row: 2;
+    grid-column: 2 / -2;
+  }
+
+  .card-body {
+    grid-row: 3;
+    grid-column: 2 / -2;
+  }
+
+  .card-read-time {
+    grid-row: 4;
+  }
+
+  .card-btn {
+    grid-row: 4;
+  }
 }
