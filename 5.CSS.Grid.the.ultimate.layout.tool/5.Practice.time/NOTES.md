@@ -1,13 +1,20 @@
 # Notes
 
-- For demos, to center using flexbox
+Our content is composed of these blocks:
 
-```css
-body {
-  margin: 0;
-  min-height: 100vh; /*important because the height of the body is defined by its content!*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
+![blocks in design](myself/img/Image-009.png)
+
+But the bottom content cannot be 2 columns while the rest remains on 1 colum.
+
+So let's apply grid!
+
+![blocks in design with grid](myself/img/Image-010.png)
+
+So we have:
+
+- for small screens:
+  - 4 rows
+  - 2 columns
+- for larger screens:
+  - 3 rows
+  - 3 columns
