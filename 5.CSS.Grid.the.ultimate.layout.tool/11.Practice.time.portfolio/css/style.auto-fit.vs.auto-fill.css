@@ -8,10 +8,14 @@ body {
 .portfolio {
   padding: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1em;
 }
-
+.portfolio-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.portfolio-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 .portfolio-title {
   text-align: center;
   color: #00c896;
