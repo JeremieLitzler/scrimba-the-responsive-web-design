@@ -1,0 +1,113 @@
+/*  Fonts
+-----
+font-family: 'Source sans Pro', serif;
+*/
+
+/* Colors :
+    #F18119
+    #404040
+    #FFF
+    Gradient : FF713B > FFA51D
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 300px;
+  color: #000;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.theme-color-light {
+  color: #fff;
+}
+.theme-color-dark {
+  color: #000;
+}
+.theme-bg-light {
+  background-color: #fff;
+}
+.theme-bg-dark {
+  background-color: #000;
+}
+.theme-color-accent {
+  color: #ffe600;
+}
+.theme-bg-accent {
+  background-color: #ffe600;
+}
+.theme-bb-accent {
+  border-bottom: 1px solid #ffe600;
+}
+
+/* Typography */
+
+nav {
+  margin-top: 1em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 900;
+  margin-left: 2em;
+  padding: 0.25em 0;
+}
+
+a:hover,
+a:focus {
+  color: #ffe600;
+}
+
+.current-page {
+  padding-bottom: 0.25em;
+}
+.article-title {
+  padding-bottom: 1em;
+}
+
+.current-page:hover {
+  color: #ffe600;
+}
+
+a,
+.btn {
+  border-radius: 2px;
+  padding: 0.625em 2em;
+  transform: scale(1);
+  transition: transform 500ms;
+  cursor: pointer;
+}
+a:hover,
+a:focus,
+a:active,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: scale(1.1);
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.3rem hsl(59, 100%, 49%);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #000;
+}
+/* End Typography */
+
+/* Layout */
+
+/* End Layout */
