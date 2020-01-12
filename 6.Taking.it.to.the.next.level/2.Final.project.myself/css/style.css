@@ -55,17 +55,27 @@ img {
 
 /* Typography */
 
-nav {
-  margin-top: 1em;
+h1,
+.logo-accent {
+  font-size: 1.625rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+header {
+  height: 4em;
 }
 
-a {
+.nav-link {
   text-decoration: none;
+  font-size: 0.825rem;
   font-weight: 900;
-  margin-left: 2em;
-  padding: 0.25em 0;
 }
 
+.nav-link,
+a {
+  font-size: 0.825rem;
+}
 a:hover,
 a:focus {
   color: #ffe600;
@@ -74,16 +84,17 @@ a:focus {
 .current-page {
   padding-bottom: 0.25em;
 }
-.article-title {
-  padding-bottom: 1em;
-}
-
 .current-page:hover {
   color: #ffe600;
 }
 
+.article-title {
+  padding-bottom: 1em;
+}
+
 a,
 .btn {
+  font-weight: 900;
   border-radius: 2px;
   padding: 0.625em 2em;
   transform: scale(1);
