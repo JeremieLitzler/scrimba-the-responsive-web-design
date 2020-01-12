@@ -22,7 +22,7 @@
     grid-template-columns: 100px 300px 100px 100px;
     grid-template-areas:
       "header header header header"
-      ". content sidebar ."
+      ". content sidebar ." /* The dot means "have an empty cell */
       "footer footer footer footer";
   }
 }
