@@ -114,6 +114,11 @@ a:focus {
   background-size: cover;
   background-position: center;
 }
+
+.intro-title + p {
+  line-height: 1.6;
+  letter-spacing: 1;
+}
 .skills {
   padding: 2.5em;
 }
