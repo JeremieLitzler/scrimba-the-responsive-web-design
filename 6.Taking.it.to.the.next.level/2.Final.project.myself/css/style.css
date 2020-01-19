@@ -65,10 +65,10 @@ h2 {
 h1,
 .logo-accent,
 .logo-light {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin-bottom: 0;
 }
 p {
@@ -87,7 +87,7 @@ nav {
   text-align: center;
 }
 .nav-link {
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   line-height: 3rem;
   text-decoration: none;
   font-weight: 900;
@@ -112,7 +112,7 @@ a:focus {
 .hero {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 .skills {
   padding: 2.5em;
@@ -141,6 +141,7 @@ article:last-child {
 a,
 .btn {
   display: inline-block;
+  font-size: 0.875rem;
   font-weight: 900;
   border-radius: 2px;
   line-height: 1.25em;
