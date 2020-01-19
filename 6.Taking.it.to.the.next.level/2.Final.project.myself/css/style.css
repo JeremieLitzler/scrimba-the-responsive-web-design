@@ -76,8 +76,8 @@ p {
 }
 
 header,
-.hero {
-  padding: 0 2em;
+.intro {
+  padding: 0 1rem;
   padding-bottom: 2em;
 }
 .logo-accent {
@@ -112,7 +112,7 @@ a:focus {
 .hero {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
-  background-position: left;
+  background-position: center;
 }
 .skills {
   padding: 2.5em;
@@ -188,8 +188,8 @@ header {
   align-self: center;
 }
 
-.hero-title,
-.hero-title + p {
+.intro-title,
+.intro-title + p {
   width: 60vw;
 }
 
