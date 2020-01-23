@@ -137,6 +137,7 @@ a:focus {
 }
 
 article {
+  padding: 0 3em;
   margin-bottom: 4em;
 }
 article:last-child {
@@ -223,4 +224,5 @@ footer {
 .social-icons {
   order: -1;
 }
+
 /* End Layout */
