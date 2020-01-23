@@ -81,7 +81,7 @@ header,
   padding-bottom: 2em;
 }
 .logo-accent {
-  height: 4rem;
+  height: 3rem;
 }
 nav {
   text-align: center;
@@ -120,7 +120,7 @@ a:focus {
 }
 
 .intro-title {
-  padding-top: 2em;
+  padding-top: 1.5rem;
   line-height: 1.2;
 }
 .intro-title + p {
@@ -128,7 +128,7 @@ a:focus {
   letter-spacing: 1;
 }
 .intro-action {
-  margin-bottom: 2em;
+  margin-bottom: 1.5rem;
 }
 .skills {
   padding: 2.5em;
