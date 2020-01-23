@@ -61,6 +61,7 @@ img {
 h1,
 h2 {
   margin: 0;
+  font-weight: 900;
 }
 h1,
 .logo-accent,
