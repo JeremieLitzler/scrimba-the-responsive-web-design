@@ -112,7 +112,7 @@ a:focus {
 .hero {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 }
 
 .intro {
