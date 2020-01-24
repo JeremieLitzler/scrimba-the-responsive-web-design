@@ -76,22 +76,6 @@ p {
   color: #404040;
 }
 
-header,
-.intro {
-  margin: 0 1em 3em 1em;
-}
-.intro {
-  margin-bottom: 0;
-}
-.hero {
-  padding-bottom: 3em;
-}
-.skills {
-  padding: 3em 0;
-}
-.logo-accent {
-  height: 3em;
-}
 nav {
   text-align: center;
 }
@@ -135,12 +119,6 @@ a:focus {
 .intro-title + p {
   line-height: 1.6;
   letter-spacing: 1;
-}
-article {
-  margin: 0 4em 4em 4em;
-}
-article:last-child {
-  margin-bottom: 0;
 }
 .article-title {
   text-align: center;
@@ -189,11 +167,6 @@ a:active,
 footer {
   background-color: #ebebeb;
   text-align: center;
-  padding: 3em;
-}
-
-.social-icons {
-  margin-bottom: 3em;
 }
 /* End Typography */
 
@@ -210,25 +183,50 @@ header {
   align-self: center;
 }
 
-.intro-title,
-.intro-title + p {
+header,
+.intro {
+  margin: 0 1em 3em 1em;
+}
+.intro {
+  margin-bottom: 0;
+}
+.hero {
+  padding-bottom: 3em;
+}
+.skills {
+  padding: 3em 0;
+}
+.logo-accent {
+  height: 3em;
+}
+
+.intro {
   width: 75vw;
+}
+
+article {
+  margin: 0 4em 4em 4em;
+}
+article:last-child {
+  margin-bottom: 0;
 }
 
 footer {
   display: flex;
   flex-direction: column;
+  padding: 3em;
 }
 
 .social-icons {
+  margin-bottom: 3em;
   order: -1;
 }
 
-@media (min-width: 800px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 600px) {
+  .intro {
+    width: 60vw;
   }
+}
+@media (min-width: 800px) {
 }
 /* End Layout */
