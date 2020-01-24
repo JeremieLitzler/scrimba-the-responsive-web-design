@@ -219,17 +219,53 @@ footer > div {
 }
 
 @media (min-width: 600px) {
+  header > div {
+    justify-content: flex-start;
+  }
+  .nav-list {
+    display: block;
+  }
+  .nav-icon {
+    display: none;
+  }
+
   .intro {
     width: 50vw;
   }
 
-  .skills {
+  .skills > div {
     display: flex;
   }
 
   article {
     margin: 0 2em;
     width: 40vw;
+  }
+
+  footer > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo social"
+      "description description ."
+      "copyright copyright .";
+    justify-items: start;
+    text-align: initial;
+  }
+  .logo-footer {
+    grid-area: logo;
+    margin-bottom: 0.5em;
+  }
+  .footer-desciption {
+    grid-area: description;
+    margin: 0;
+  }
+  .social-icons {
+    grid-area: social;
+    margin: 0;
+  }
+  .copyright {
+    grid-area: copyright;
   }
 }
 @media (min-width: 800px) {
