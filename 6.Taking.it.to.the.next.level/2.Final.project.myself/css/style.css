@@ -171,9 +171,12 @@ footer {
 /* End Typography */
 
 /* Layout */
-header {
+header > div {
   display: flex;
   justify-content: space-between;
+}
+.logo-accent {
+  height: 3em;
 }
 .nav-list {
   display: none;
@@ -183,38 +186,31 @@ header {
   align-self: center;
 }
 
-header,
-.intro {
+.container {
   margin: 0 1em 3em 1em;
 }
-.intro {
+
+.skills > div {
+  padding-top: 3em;
+  padding-bottom: 3em;
   margin-bottom: 0;
 }
-.hero {
-  padding-bottom: 3em;
-}
-.skills {
-  padding: 3em 0;
-}
-.logo-accent {
-  height: 3em;
-}
-
 .intro {
   width: 75vw;
 }
 
 article {
-  margin: 0 4em 4em 4em;
+  margin: 0 2em 2em 2em;
 }
-article:last-child {
+article:last-child,
+article:last-child > p {
   margin-bottom: 0;
 }
 
-footer {
+footer > div {
+  padding-top: 3em;
   display: flex;
   flex-direction: column;
-  padding: 3em;
 }
 
 .social-icons {
