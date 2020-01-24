@@ -77,10 +77,17 @@ p {
 }
 
 header,
-.intro,
-.skills {
-  padding: 0 1em;
+.intro {
+  margin: 0 1em 3em 1em;
+}
+.intro {
+  margin-bottom: 0;
+}
+.hero {
   padding-bottom: 3em;
+}
+.skills {
+  padding: 3em 0;
 }
 .logo-accent {
   height: 3em;
@@ -105,7 +112,7 @@ a:focus {
 }
 
 .current-page {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.25rem;
 }
 .current-page:hover {
   color: #ffe600;
@@ -129,16 +136,8 @@ a:focus {
   line-height: 1.6;
   letter-spacing: 1;
 }
-.intro-action {
-  /* margin-bottom: 1.5rem; */
-}
-.skills {
-  padding-top: 3em;
-}
-
 article {
-  padding: 0 3em;
-  margin-bottom: 4em;
+  margin: 0 4em 4em 4em;
 }
 article:last-child {
   margin-bottom: 0;
