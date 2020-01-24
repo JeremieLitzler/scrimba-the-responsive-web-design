@@ -224,9 +224,37 @@ footer {
 
 @media (min-width: 600px) {
   .intro {
-    width: 60vw;
+    width: 50vw;
+  }
+
+  .skills {
+    display: flex;
+  }
+
+  article {
+    margin: 0 2em;
+    width: 40vw;
   }
 }
 @media (min-width: 800px) {
+  .container {
+    width: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .intro {
+    width: 40vw;
+  }
 }
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .intro {
+    width: 60vw;
+  }
+}
+
 /* End Layout */
