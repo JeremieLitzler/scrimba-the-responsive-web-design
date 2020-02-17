@@ -201,6 +201,10 @@ footer {
   border-radius: 10em;
   padding: 5px 10px;
 }
+
+.copyright {
+  font-size: 0.625rem;
+}
 /* End Typography */
 
 /* Layout */
@@ -216,7 +220,16 @@ footer {
   */
   grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
 }
-.main-grid > * {
+@media (min-width: 600px) {
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(minmax(180px, 320px)) minmax(
+        1em,
+        1fr
+      );
+  }
+}
+
+.hero > * {
   /* Centers the content of hero into the middle column */
   grid-column: 2 / -2;
 }
@@ -250,8 +263,15 @@ footer {
 
 /* Skills */
 
+.skill {
+  grid-column: 2 / -2;
+}
 /* Footer */
-.footer-content {
+.footer-main,
+.social-links {
+  grid-column: 2 / -2;
+}
+.social-links {
   padding-top: 4em;
 }
 
@@ -261,6 +281,13 @@ footer {
 }
 
 @media (min-width: 600px) {
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(minmax(180px, 320px)) minmax(
+        1em,
+        1fr
+      );
+  }
+
   .header-content {
     justify-content: flex-start;
   }
@@ -309,16 +336,6 @@ footer {
   }
   .copyright {
     grid-area: copyright;
-  }
-}
-@media (min-width: 800px) {
-  .intro {
-    width: 40vw;
-  }
-}
-@media (min-width: 1200px) {
-  .intro {
-    width: 60vw;
   }
 }
 
