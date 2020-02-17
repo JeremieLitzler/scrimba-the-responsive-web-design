@@ -10,6 +10,7 @@ font-family: 'Source sans Pro', serif;
     Gradient : FF713B > FFA51D
 */
 
+/* Must have CSS */
 * {
   box-sizing: border-box;
 }
@@ -20,7 +21,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.6;
   min-width: 300px;
   color: #fff;
   background-color: #000;
@@ -29,6 +30,13 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+h1,
+h2,
+strong,
+a {
+  font-weight: 700;
 }
 
 .theme-color-light {
@@ -55,18 +63,20 @@ img {
 .theme-bb-accent:hover {
   border-bottom: 2px solid #fff;
 }
+/* End - Must have CSS */
 
 /* Typography */
+
+/* General Typography */
 
 h1,
 h2 {
   margin: 0;
-  font-weight: 900;
 }
 h1,
 .logo-accent,
 .logo-light {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 h2 {
   font-size: 1.125rem;
@@ -76,6 +86,36 @@ p {
   color: #404040;
 }
 
+a,
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0.5em 1.75em;
+  transform: scale(1);
+  transition: transform 500ms;
+  cursor: pointer;
+  text-decoration: none;
+  justify-self: start;
+}
+
+a:hover,
+a:focus,
+a:active,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: scale(1.1);
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.1rem hsl(59, 100%, 49%);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #000;
+}
+
+/* Header */
 nav {
   text-align: center;
 }
@@ -83,7 +123,7 @@ nav {
   font-size: 0.875rem;
   line-height: 3rem;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .nav-link,
@@ -102,23 +142,16 @@ a:focus {
   color: #ffe600;
 }
 
-.hero {
-  background-image: url(../img/hero-bg.jpg);
-  background-size: cover;
-  background-position: center;
-}
+/* Hero */
 
-.intro {
-  background-color: transparent;
-}
-
-.intro-title {
-  /* padding-top: 1.5rem; */
-  line-height: 1.2;
-}
-.intro-title + p {
-  line-height: 1.6;
+.hero-title + p {
   letter-spacing: 1;
+}
+
+/* Skills */
+
+.skills {
+  padding: 4em 0;
 }
 .article-title {
   text-align: center;
@@ -128,41 +161,18 @@ a:focus {
   display: block;
   width: 4rem;
   margin: 0 auto;
-  font-size: 0.5rem;
+  font-size: 0.0625em;
 }
 
 .article-description {
   text-align: center;
 }
-a,
-.btn {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 900;
-  border-radius: 2px;
-  line-height: 1.25em;
-  padding: 0.875em 2em;
-  transform: scale(1);
-  transition: transform 500ms;
-  cursor: pointer;
-  text-decoration: none;
-}
-a:hover,
-a:focus,
-a:active,
-.btn:hover,
-.btn:focus,
-.btn:active {
-  transform: scale(1.1);
-  outline: none;
-  box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.1rem hsl(59, 100%, 49%);
+
+.article-description:last-child {
+  margin-bottom: 0;
 }
 
-.btn:hover,
-.btn:focus,
-.btn:active {
-  background-color: #000;
-}
+/* Footer */
 
 footer {
   background-color: #ebebeb;
@@ -171,12 +181,32 @@ footer {
 /* End Typography */
 
 /* Layout */
-header > div {
+
+/* General layout */
+.main-grid {
+  display: grid;
+  /* 
+    3 columns where 
+      => col 1 size is 1em to 1fr
+      => col 2 size is 0 to 500px
+      => col 3 size is 1em to 1fr
+  */
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
+}
+.main-grid > * {
+  /* Centers the content of hero into the middle column */
+  grid-column: 2 / -2;
+}
+
+/* Header */
+.header-content {
   display: flex;
   justify-content: space-between;
 }
 .logo-accent {
   height: 3em;
+  display: flex;
+  align-items: flex-end;
 }
 .nav-list {
   display: none;
@@ -186,35 +216,23 @@ header > div {
   align-self: center;
 }
 
-.container {
-  margin: 0 1em 3em 1em;
+/* Hero */
+.hero {
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 4em 0;
 }
 
-.skills > div {
-  padding-top: 3em;
-  padding-bottom: 3em;
-  margin-bottom: 0;
-}
-.intro {
-  width: 75vw;
-}
+/* Skills */
 
-article {
-  margin: 0 2em 2em 2em;
-}
-article:last-child,
-article:last-child > p {
-  margin-bottom: 0;
-}
-
-footer > div {
-  padding-top: 3em;
-  display: flex;
-  flex-direction: column;
+/* Footer */
+.footer-content {
+  padding-top: 4em;
 }
 
 .social-icons {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
   order: -1;
 }
 
@@ -269,21 +287,11 @@ footer > div {
   }
 }
 @media (min-width: 800px) {
-  .container {
-    width: 800px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
   .intro {
     width: 40vw;
   }
 }
 @media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
   .intro {
     width: 60vw;
   }
