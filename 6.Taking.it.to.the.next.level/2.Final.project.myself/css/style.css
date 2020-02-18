@@ -235,6 +235,11 @@ footer {
 }
 
 /* Header */
+header > * {
+  grid-column: 2 / -2;
+  justify-items: start;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -262,9 +267,13 @@ footer {
 }
 
 /* Skills */
-
 .skill {
   grid-column: 2 / -2;
+  margin-bottom: 2em;
+}
+
+.skill:last-child {
+  margin-bottom: 0;
 }
 /* Footer */
 .footer-main,
