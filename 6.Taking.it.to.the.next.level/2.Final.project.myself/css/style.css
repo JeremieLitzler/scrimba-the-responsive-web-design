@@ -216,7 +216,7 @@ footer {
     grid-template-columns:
       minmax(1em, 1fr)
       /*Why 3? Because we have 3 skills !*/
-      repeat(3, minmax(180px, 320px))
+      repeat(3, minmax(145px, 320px))
       minmax(1em, 1fr);
   }
 }
@@ -301,6 +301,7 @@ footer {
     ". social ."
     ". main .";
   padding: 2em 0;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -312,13 +313,20 @@ footer {
 .footer-main {
   grid-area: main;
 }
+@media (min-width: 600px) {
+  .footer-main {
+    text-align: left;
+  }
+}
 .social-links {
   grid-area: social;
   margin-bottom: 1em;
 }
 
-.footer-main {
-  text-align: left;
+@media (min-width: 600px) {
+  .social-links {
+    justify-self: end;
+  }
 }
 
 /* End Layout */
