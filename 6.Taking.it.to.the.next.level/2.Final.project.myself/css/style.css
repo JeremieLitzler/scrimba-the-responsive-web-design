@@ -221,6 +221,42 @@ footer {
   }
 }
 
+/* Header */
+
+/* Header */
+header > * {
+  grid-column: 2 / -2;
+  justify-items: start;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-accent {
+  height: 3em;
+  display: flex;
+  align-items: flex-end;
+}
+.nav-list {
+  display: none;
+}
+.nav-icon {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+@media (min-width: 600px) {
+  .nav-icon {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 /* Hero */
 .hero {
   background-image: url(../img/hero-bg.jpg);
@@ -244,29 +280,6 @@ footer {
   .hero > * {
     grid-column: 2 / span 2;
   }
-}
-/* Header */
-header > * {
-  grid-column: 2 / -2;
-  justify-items: start;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo-accent {
-  height: 3em;
-  display: flex;
-  align-items: flex-end;
-}
-.nav-list {
-  display: none;
-}
-.nav-icon {
-  justify-self: flex-end;
-  align-self: center;
 }
 
 /* Skills */
