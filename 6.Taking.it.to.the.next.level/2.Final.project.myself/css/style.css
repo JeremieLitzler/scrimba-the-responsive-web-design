@@ -162,22 +162,11 @@ a:focus {
 
 /* Skills */
 
-.skills {
-  padding: 4em 0;
-}
-.article-title {
-  text-align: center;
-}
-
 .article-title-underline {
   display: block;
   width: 4rem;
   margin: 0 auto;
   font-size: 0.0625em;
-}
-
-.article-description {
-  text-align: center;
 }
 
 .article-description:last-child {
@@ -219,14 +208,30 @@ footer {
       => col 3 size is 1em to 1fr
   */
   grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
+  column-gap: 2em;
 }
 
 @media (min-width: 600px) {
   .main-grid {
     grid-template-columns:
       minmax(1em, 1fr)
+      /*Why 3? Because we have 3 skills !*/
       repeat(3, minmax(180px, 320px))
       minmax(1em, 1fr);
+  }
+}
+
+/* Hero */
+.hero {
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 4em 0;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 6em 0;
   }
 }
 
@@ -264,87 +269,56 @@ header > * {
   align-self: center;
 }
 
-/* Hero */
-.hero {
-  background-image: url(../img/hero-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 4em 0;
-}
-
 /* Skills */
+.skills {
+  padding: 4em 0;
+  text-align: center;
+}
 .skill {
   grid-column: 2 / -2;
   margin-bottom: 2em;
+}
+@media (min-width: 600px) {
+  .skills {
+    padding: 6em 0;
+  }
+  .skill {
+    grid-column: span 1;
+  }
+  .skill:first-child {
+    /*Skip for the first skill the first column */
+    grid-column: 2 / span 1;
+  }
 }
 
 .skill:last-child {
   margin-bottom: 0;
 }
 /* Footer */
-.footer-main,
-.social-links {
-  grid-column: 2 / -2;
-}
-.social-links {
-  padding-top: 4em;
-}
 
-.social-links {
-  margin-bottom: 1em;
-  order: -1;
+footer {
+  grid-template-areas:
+    ". social ."
+    ". main .";
+  padding: 2em 0;
 }
 
 @media (min-width: 600px) {
-  .header-content {
-    justify-content: flex-start;
+  footer {
+    grid-template-areas: ". main main social .";
+    padding: 6em 0;
   }
-  .nav-list {
-    padding-left: 1em;
-    display: flex;
-  }
-  .nav-icon {
-    display: none;
-  }
+}
+.footer-main {
+  grid-area: main;
+}
+.social-links {
+  grid-area: social;
+  margin-bottom: 1em;
+}
 
-  .intro {
-    width: 50vw;
-  }
-
-  .skills > div {
-    display: flex;
-  }
-
-  article {
-    margin: 0 2em;
-    width: 40vw;
-  }
-
-  footer > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "logo logo social"
-      "description description ."
-      "copyright copyright .";
-    justify-items: start;
-    text-align: initial;
-  }
-  .logo-footer {
-    grid-area: logo;
-    margin-bottom: 0.5em;
-  }
-  .footer-desciption {
-    grid-area: description;
-    margin: 0;
-  }
-  .social-links {
-    grid-area: social;
-    margin: 0;
-  }
-  .copyright {
-    grid-area: copyright;
-  }
+.footer-main {
+  text-align: left;
 }
 
 /* End Layout */

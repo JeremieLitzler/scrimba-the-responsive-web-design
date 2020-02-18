@@ -1,4 +1,4 @@
-# Starting work on the homepage
+# Setting up the grid, and hero, for larger screens
 
 ## Supporting Scrimba
 

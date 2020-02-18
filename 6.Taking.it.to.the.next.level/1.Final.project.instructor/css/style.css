@@ -1,0 +1,152 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    line-height: 1.6;
+}
+
+
+/* ==================
+    Typography
+===================== */
+
+h1, h2, strong {
+    font-weight: 700;
+}
+
+.accent-color {
+    color: #FFE600;
+}
+
+
+.hero-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    color: #000;
+    margin-top: 1.25em;
+}
+
+/* buttons */
+
+.btn {
+    padding: .5em 1.75em;
+    font-weight: 700;
+    margin-top: .5em;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #FFE600;
+    color: #000;
+    justify-self: start;
+}
+
+
+/* ==================
+    general layout
+===================== */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+}
+
+@media (min-width: 600px) {
+    .main-grid {
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+    }
+}
+
+
+/* footer */
+
+.footer {
+    background: #ebebeb;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.footer-main,
+.social-list {
+    grid-column: 2 / -2;
+}
+
+.footer-logo,
+.footer-text,
+.footer-fineprint {
+    opacity: .3;
+}
+
+.footer-fineprint {
+    font-size: .75rem;
+    margin-top: 4em;
+}
+
+.social-list {
+    order: -1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    color: #000;
+    font-size: 1.75rem;
+    margin: 0 .5em;
+}
+
+.social-link:hover {
+    color: #777;
+}
+
+/* ==================
+    hero area
+===================== */
+
+.hero {
+    background-image: url(img/hero-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 4em 0;
+    color: #fff;
+}
+
+.hero > * {
+    grid-column: 2 / -2;
+}
+
+@media (min-width: 600px) {
+    
+    .hero {
+        padding: 6em 0;
+    }
+    
+    .hero > * {
+        grid-column: 2 / span 2;
+    }
+
+}
+
+
+/* ==================
+    info section
+===================== */
+
+.info {
+    padding: 4em 0;
+    text-align: center;
+}
+
+.col {
+    grid-column: 2 / -2;
+}
