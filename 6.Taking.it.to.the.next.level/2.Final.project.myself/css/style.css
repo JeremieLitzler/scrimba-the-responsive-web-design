@@ -208,7 +208,6 @@ footer {
       => col 3 size is 1em to 1fr
   */
   grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
-  column-gap: 2em;
 }
 
 @media (min-width: 600px) {
@@ -218,6 +217,7 @@ footer {
       /*Why 3? Because we have 3 skills !*/
       repeat(3, minmax(145px, 320px))
       minmax(1em, 1fr);
+    column-gap: 2em;
   }
 }
 
