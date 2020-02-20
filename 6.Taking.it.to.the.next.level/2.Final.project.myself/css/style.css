@@ -245,6 +245,16 @@ footer {
   }
 }
 
+@media (min-width: 800px) {
+  .main-grid {
+    grid-template-columns:
+      minmax(1em, 1fr)
+      repeat(6, minmax(95px, 200px))
+      minmax(1em, 1fr);
+    column-gap: 1em;
+  }
+}
+
 /* Header */
 header > * {
   grid-column: 2 / -2;
@@ -340,6 +350,12 @@ nav {
   }
 }
 
+@media (min-width: 1400px) {
+  .hero {
+    padding: 12em 0;
+  }
+}
+
 .hero > * {
   /* Centers the content of hero into the middle column */
   grid-column: 2 / -2;
@@ -351,15 +367,27 @@ nav {
   }
 }
 
+@media (min-width: 800px) {
+  .hero > * {
+    grid-column: 2 / span 3;
+  }
+}
+
 /* Skills */
 .skills {
   padding: 4em 0;
   text-align: center;
 }
+
 .skill {
   grid-column: 2 / -2;
   margin-bottom: 2em;
 }
+
+.skill:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 600px) {
   .skills {
     padding: 6em 0;
@@ -373,9 +401,16 @@ nav {
   }
 }
 
-.skill:last-child {
-  margin-bottom: 0;
+@media (min-width: 800px) {
+  .skill {
+    grid-column: span 2;
+  }
+  .skill:first-child {
+    /*Skip for the first skill the first column */
+    grid-column: 2 / span 2;
+  }
 }
+
 /* Footer */
 
 footer {
@@ -390,6 +425,11 @@ footer {
   footer {
     grid-template-areas: ". main main social .";
     padding: 6em 0;
+  }
+}
+@media (min-width: 800px) {
+  footer {
+    grid-template-areas: ". main main main main social .";
   }
 }
 .footer-main {
@@ -408,6 +448,11 @@ footer {
 @media (min-width: 600px) {
   .social-links {
     justify-self: end;
+  }
+}
+@media (min-width: 800px) {
+  .social-links {
+    grid-column: span 2;
   }
 }
 
