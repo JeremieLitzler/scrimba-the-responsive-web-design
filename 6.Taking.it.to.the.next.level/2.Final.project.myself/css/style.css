@@ -9,7 +9,7 @@ font-family: 'Source sans Pro', serif;
     #FFF
     Gradient : FF713B > FFA51D
 */
-
+/*===================================*/
 /* Must have CSS */
 * {
   box-sizing: border-box;
@@ -64,7 +64,9 @@ a {
   border-bottom: 2px solid #fff;
 }
 /* End - Must have CSS */
+/*===================================*/
 
+/*===================================*/
 /* Typography */
 
 /* General Typography */
@@ -101,6 +103,12 @@ a i:active {
   transform: scale(1.1);
 }
 
+a:hover,
+a:focus {
+  color: #ffe600;
+  background-color: #000;
+}
+
 .btn {
   display: inline-block;
   border-radius: 2px;
@@ -131,20 +139,21 @@ nav {
   text-align: center;
 }
 .nav-link {
+  margin-top: 2em;
   line-height: 3rem;
   text-decoration: none;
   font-weight: 700;
-  padding-right: 2em;
 }
 
 .nav-link,
 a {
   text-transform: lowercase;
 }
-a:hover,
-a:focus {
-  color: #ffe600;
-  background-color: #000;
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  transform: scale(1.5);
 }
 
 .current-page {
@@ -195,7 +204,9 @@ footer {
   font-size: 0.625rem;
 }
 /* End Typography */
+/*===================================*/
 
+/*===================================*/
 /* Layout */
 
 /* General layout */
@@ -222,8 +233,6 @@ footer {
 }
 
 /* Header */
-
-/* Header */
 header > * {
   grid-column: 2 / -2;
   justify-items: start;
@@ -239,16 +248,50 @@ header > * {
   display: flex;
   align-items: flex-end;
 }
-.nav-list {
-  display: none;
+
+/* Navigation */
+
+nav {
+  position: fixed;
+  left: 100%;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  transform: translateX(0);
 }
-.nav-icon {
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-nav {
   justify-self: flex-end;
   align-self: center;
 }
 
+.close-nav {
+  align-self: start;
+  padding: 1em;
+  grid-column: 1 / span 1;
+}
+.opening-nav {
+  transform: translateX(-100%);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.closing-nav {
+  transform: translateX(100%);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
 @media (min-width: 600px) {
-  .nav-icon {
+  .toggle-nav {
     display: none;
   }
 
@@ -257,6 +300,7 @@ header > * {
     justify-content: flex-start;
   }
 }
+
 /* Hero */
 .hero {
   background-image: url(../img/hero-bg.jpg);
@@ -343,3 +387,4 @@ footer {
 }
 
 /* End Layout */
+/*===================================*/
