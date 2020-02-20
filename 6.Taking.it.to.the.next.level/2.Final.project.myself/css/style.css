@@ -84,6 +84,21 @@ h2 {
   font-size: 1.125rem;
   margin-bottom: 0;
 }
+
+@media (min-width: 1400px) {
+  h1,
+  .logo-accent,
+  .logo-light {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
 p {
   color: #404040;
 }
@@ -361,6 +376,11 @@ nav {
   grid-column: 2 / -2;
 }
 
+@media (max-width: 600px) {
+  .hero > * {
+    margin-right: 20%;
+  }
+}
 @media (min-width: 600px) {
   .hero > * {
     grid-column: 2 / span 2;
