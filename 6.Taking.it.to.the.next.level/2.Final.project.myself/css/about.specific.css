@@ -12,6 +12,7 @@
 .about {
   text-align: center;
 }
+
 .about-title {
   font-size: 3rem;
 }
@@ -57,8 +58,16 @@
 }
 
 @media (min-width: 800px) {
+  .about * {
+    grid-column: 3 / -3;
+  }
   .about-details {
-    grid-template-areas: ". image image content content content content .";
+    grid-template-columns:
+      minmax(1em, 1fr)
+      repeat(3, minmax(120px, 320px))
+      minmax(1em, 1fr);
+    column-gap: 4em;
+    grid-template-areas: ". image content content .";
   }
   .image-stack {
     grid-area: image;
