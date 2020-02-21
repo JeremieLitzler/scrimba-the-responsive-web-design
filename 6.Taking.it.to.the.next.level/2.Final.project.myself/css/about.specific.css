@@ -33,6 +33,11 @@
 .about-detail {
   margin: 3em 0;
 }
+@media (min-width: 800px) {
+  .about-detail {
+    margin: 0 0 6em;
+  }
+}
 .about-detail-title .article-title-underline {
   margin: initial;
 }
