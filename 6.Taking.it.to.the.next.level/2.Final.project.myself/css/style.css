@@ -24,7 +24,6 @@ body {
   line-height: 1.6;
   min-width: 300px;
   color: #fff;
-  background-color: #000;
 }
 
 img {
@@ -89,14 +88,14 @@ h2 {
   h1,
   .logo-accent,
   .logo-light {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 p {
@@ -276,6 +275,11 @@ header > * {
   justify-items: start;
 }
 
+.header-home {
+  position: absolute;
+  width: 100%;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -330,6 +334,11 @@ nav {
 }
 
 @media (min-width: 600px) {
+  .header-home,
+  .header-home nav {
+    background-color: transparent;
+  }
+
   .toggle-nav,
   .close-nav {
     display: none;
@@ -356,18 +365,18 @@ nav {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
   background-position: bottom;
-  padding: 4em 0;
+  padding: 8em 0 4em;
 }
 
 @media (min-width: 600px) {
   .hero {
-    padding: 6em 0;
+    padding: 8em 0 4em;
   }
 }
 
 @media (min-width: 1400px) {
   .hero {
-    padding: 12em 0;
+    padding: 12em 0 8em;
   }
 }
 
