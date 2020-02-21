@@ -262,9 +262,9 @@ footer {
 @media (min-width: 800px) {
   .main-grid {
     grid-template-columns:
-      minmax(1em, 1fr)
+      minmax(5em, 1fr)
       repeat(6, minmax(95px, 200px))
-      minmax(1em, 1fr);
+      minmax(5em, 1fr);
     column-gap: 1em;
   }
 }
@@ -368,6 +368,12 @@ nav {
   padding: 8em 0 4em;
 }
 
+@media (max-width: 400px) {
+  .hero {
+    background-image: none;
+    background-color: #000;
+  }
+}
 @media (min-width: 600px) {
   .hero {
     padding: 8em 0 4em;
@@ -385,7 +391,7 @@ nav {
   grid-column: 2 / -2;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 400px) {
   .hero > * {
     margin-right: 20%;
   }
@@ -398,7 +404,7 @@ nav {
 
 @media (min-width: 800px) {
   .hero > * {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
   }
 }
 
