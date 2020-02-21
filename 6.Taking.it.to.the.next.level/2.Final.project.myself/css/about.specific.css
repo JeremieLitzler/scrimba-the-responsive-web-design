@@ -1,0 +1,66 @@
+/*===================================*/
+/* End Typography */
+
+.stack-dark {
+  background-color: #000;
+}
+.stack-accent {
+  background-color: #ffe600;
+}
+/*About page */
+
+.about {
+  text-align: center;
+}
+.about-title {
+  font-size: 3rem;
+}
+.about-title-accent {
+  height: 1em;
+  width: 10em;
+}
+.about-pitch {
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-seperator {
+  width: 6em;
+  margin: 0 auto;
+  border-bottom: 1px #000 solid;
+}
+
+.about-detail {
+  margin: 3em 0;
+}
+.about-detail-title .article-title-underline {
+  margin: initial;
+}
+/* End Typography */
+/*===================================*/
+/*===================================*/
+/* Layout */
+
+/* About page */
+
+.about {
+  margin: 3em 0;
+}
+.about *,
+.about-details * {
+  grid-column: 2 / -2;
+}
+
+@media (min-width: 800px) {
+  .about-details {
+    grid-template-areas: ". image image content content content content .";
+  }
+  .image-stack {
+    grid-area: image;
+  }
+  .about-detail {
+    grid-area: content;
+  }
+}
+/* End Layout */
+/*===================================*/

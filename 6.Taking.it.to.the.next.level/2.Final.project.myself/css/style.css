@@ -27,6 +27,7 @@ body {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   display: block;
 }
@@ -230,6 +231,7 @@ footer {
 .copyright {
   font-size: 0.625rem;
 }
+
 /* End Typography */
 /*===================================*/
 
