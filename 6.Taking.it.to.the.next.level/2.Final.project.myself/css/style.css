@@ -83,8 +83,23 @@ h1,
 h2 {
   font-size: 1.125rem;
   margin-bottom: 0;
+  text-align: left;
 }
-
+h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background-color: #ffe600;
+  margin-top: 0.25em;
+}
+.h2-title-underline-center {
+  text-align: center;
+}
+.h2-title-underline-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
 @media (min-width: 1400px) {
   h1,
   .logo-accent,
@@ -101,6 +116,7 @@ h2 {
 }
 p {
   color: #404040;
+  text-align: left;
 }
 
 a,
@@ -125,6 +141,7 @@ a:focus {
 }
 
 .btn {
+  border: 0;
   display: inline-block;
   border-radius: 2px;
   padding: 0.5em 1.75em;
@@ -198,7 +215,9 @@ a {
 }
 
 /* Skills */
-
+.article-description {
+  text-align: center;
+}
 .article-description:last-child {
   margin-bottom: 0;
 }

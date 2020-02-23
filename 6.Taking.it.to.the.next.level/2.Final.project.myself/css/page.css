@@ -35,62 +35,53 @@
 .page-pitch {
   font-weight: 700;
   margin: 0;
+  text-align: center;
 }
 
 .page-seperator {
   width: 6em;
   margin: 0 auto;
   border-bottom: 1px #000 solid;
-}
-
-.article-title::after {
-  content: "";
-  display: block;
-  width: 4rem;
-  height: 2px;
-  background-color: #ffe600;
-  margin-top: 0.25em;
-}
-.article-title-center::after {
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 3em;
 }
 
 .main-image {
+  margin-bottom: 2em;
   box-shadow: 5px 5px 0px black, 10px 10px 0 #ffe600;
 }
 
-/* About page */
-
-.about-detail {
+.article-content {
   margin: 3em 0;
 }
 @media (min-width: 800px) {
-  .about-detail {
+  .article-content {
     margin: 0 0 6em;
   }
 }
+
+/* About page */
 .about-detail-title {
   margin-top: 2em;
 }
 .about-detail-title:first-child {
   margin-top: 0;
 }
-.about-detail-title .article-title-underline {
+.about-detail-title .h2-title-underline-underline {
   margin: initial;
 }
+/*===================================*/
 /* End Typography */
 /*===================================*/
+
 /*===================================*/
 /* Layout */
-
+/*===================================*/
 /* template page */
 
 .page {
   margin: 3em 0 3em;
 }
-.page *,
-.page-details * {
+.page * {
   grid-column: 2 / -2;
 }
 
@@ -98,25 +89,45 @@
   .page {
     margin: 3em 0 6em;
   }
-  .page * {
-    grid-column: 3 / -3;
-  }
-  .page-details {
-    grid-template-columns:
-      minmax(1em, 1fr)
-      repeat(3, minmax(120px, 320px))
-      minmax(1em, 1fr);
-    column-gap: 4em;
-    grid-template-areas: ". image content content .";
-  }
   .image-stack {
-    grid-area: image;
+    grid-column: 2 / span 2;
   }
 
-  /* About page */
-  .about-detail {
-    grid-area: content;
+  .about-contents {
+    grid-column: 4 / -2;
+    margin-left: 4em;
   }
 }
+
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 700;
+}
+input {
+  margin-bottom: 2em;
+  line-height: 2em;
+}
+
+.submit-form {
+  justify-self: self-end;
+}
+
+@media (min-width: 800px) {
+  .contact-secondary {
+    grid-column: 2 / span 2;
+  }
+  .contact-primary {
+    grid-column: 4 / -2;
+    margin-left: 4em;
+    order: 1;
+  }
+}
+
 /* End Layout */
 /*===================================*/
