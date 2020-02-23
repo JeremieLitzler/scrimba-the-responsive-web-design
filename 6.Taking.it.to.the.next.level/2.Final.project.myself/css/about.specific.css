@@ -31,6 +31,9 @@
   border-bottom: 1px #000 solid;
 }
 
+.main-image {
+  box-shadow: 5px 5px 0px black, 10px 10px 0 #ffe600;
+}
 .about-detail {
   margin: 3em 0;
 }
@@ -56,7 +59,7 @@
 /* page page */
 
 .page {
-  margin: 3em 0 6em;
+  margin: 3em 0 3em;
 }
 .page *,
 .page-details * {
@@ -64,6 +67,9 @@
 }
 
 @media (min-width: 800px) {
+  .page {
+    margin: 3em 0 6em;
+  }
   .page * {
     grid-column: 3 / -3;
   }

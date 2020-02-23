@@ -198,12 +198,17 @@ a {
 }
 
 /* Skills */
-
-.article-title-underline {
+.article-title::after {
+  content: "";
   display: block;
   width: 4rem;
-  margin: 0 auto;
-  font-size: 0.0625em;
+  height: 2px;
+  background-color: #ffe600;
+  margin-top: 0.25em;
+}
+.article-title-center::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-description:last-child {
