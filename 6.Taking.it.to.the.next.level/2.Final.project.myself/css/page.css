@@ -1,5 +1,5 @@
 /*===================================*/
-/* End Typography */
+/* Typography */
 
 .stack-dark {
   background-color: #000;
@@ -7,7 +7,7 @@
 .stack-accent {
   background-color: #ffe600;
 }
-/*page page */
+/* template page */
 
 .page {
   text-align: center;
@@ -43,9 +43,25 @@
   border-bottom: 1px #000 solid;
 }
 
+.article-title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background-color: #ffe600;
+  margin-top: 0.25em;
+}
+.article-title-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-image {
   box-shadow: 5px 5px 0px black, 10px 10px 0 #ffe600;
 }
+
+/* About page */
+
 .about-detail {
   margin: 3em 0;
 }
@@ -68,7 +84,7 @@
 /*===================================*/
 /* Layout */
 
-/* page page */
+/* template page */
 
 .page {
   margin: 3em 0 3em;
@@ -96,6 +112,8 @@
   .image-stack {
     grid-area: image;
   }
+
+  /* About page */
   .about-detail {
     grid-area: content;
   }
