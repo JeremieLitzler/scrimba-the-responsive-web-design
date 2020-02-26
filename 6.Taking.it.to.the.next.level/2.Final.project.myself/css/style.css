@@ -141,7 +141,9 @@ a:focus {
 }
 
 button,
-.btn {
+.btn,
+input,
+textarea {
   border: 0;
   display: inline-block;
   border-radius: 2px;
@@ -153,6 +155,11 @@ button,
   justify-self: start;
 }
 
+input,
+textarea {
+  border: 1px #404040 solid;
+}
+
 button:hover,
 button:focus,
 button:active,
@@ -160,6 +167,20 @@ button:active,
 .btn:focus,
 .btn:active {
   transform: scale(1.1);
+}
+
+button:hover,
+button:focus,
+button:active,
+.btn:hover,
+.btn:focus,
+.btn:active,
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.1rem hsl(59, 100%, 49%);
   background-color: #000;
@@ -178,7 +199,6 @@ nav {
 
 .nav-link {
   margin-top: 2em;
-  line-height: 3rem;
   text-decoration: none;
   font-weight: 700;
 }
@@ -201,11 +221,12 @@ a {
     transform: scale(1.2);
   }
 }
-.current-page {
+.current {
   padding-bottom: 0.25rem;
+  border-bottom: 2px #ffe600 solid;
 }
-.current-page:hover {
-  color: #ffe600;
+.current:hover {
+  border-bottom: 2px #fff solid;
 }
 
 /* Hero */

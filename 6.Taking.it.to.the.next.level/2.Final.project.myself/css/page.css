@@ -113,6 +113,12 @@ form {
   display: grid;
 }
 
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
 textarea {
   resize: vertical;
   height: 100px;
@@ -131,6 +137,18 @@ textarea {
   .contact-primary {
     grid-column: 4 / -2;
     margin-left: 4em;
+  }
+  .contact-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / -1;
+    column-gap: 1em;
+  }
+  .input-name {
+    grid-column: 1;
+  }
+  .input-message,
+  .input-message ~ input {
+    grid-column: span 2;
   }
 }
 

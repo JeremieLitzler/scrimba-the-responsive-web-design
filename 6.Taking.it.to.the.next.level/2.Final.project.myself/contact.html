@@ -25,11 +25,9 @@
                 <a href="#" class="close-nav" title="Close navigation">
                     <i class="fas fa-2x fa-times-circle theme-color-light"></i>
                 </a>
-                <a class="nav-link theme-color-light" href="index.html" title="Home">
-                    <span class="current-page theme-bb-accent">Home</span>
-                </a>
+                <a class="nav-link theme-color-light" href="index.html" title="Home">Home</a>
                 <a class="nav-link theme-color-light" href="about.html" title="About me">About me</a>
-                <a class="nav-link theme-color-light" href="contact.html" title="Contact us">Contact</a>
+                <a class="nav-link theme-color-light current" href="contact.html" title="Contact us">Contact</a>
             </nav>
             <a href="#" class="toggle-nav theme-color-light" tabindex="0">
                 <i class="fas fa-2x fa-bars"></i>
@@ -51,19 +49,19 @@
             <p>You can either use the form or <a class=" email-us-link" href="mailto:some@email.com">send us an email</a>. I'll get back in touch with you as soon as possible!</p>
         </section>
         <section class="contact-primary">
-            <form action="post">
-                <label for="firstname">
+            <form class="contact-form" action="post">
+                <label class="input-name" for="firstname">
                     First name
+                    <input type="text" name="firstname" id="firstname">
                 </label>
-                <input type="text" name="firstname" id="firstname">
-                <label for="email">
+                <label class="input-email" for="email">
                     E-mail
+                    <input type="email" name="email" id="email">
                 </label>
-                <input type="email" name="email" id="email">
-                <label for="message">
+                <label class="input-message" for="message">
                     Message
+                    <textarea name="message" id="message"></textarea>
                 </label>
-                <textarea name="message" id="message"></textarea>
                 <input class="submit-form btn theme-bg-accent theme-color-dark" type="submit" value="Send">
             </form>
         </section>
