@@ -1,4 +1,4 @@
-# Setting up the grid, and hero, for larger screens
+# The loose ends
 
 ## Supporting Scrimba
 

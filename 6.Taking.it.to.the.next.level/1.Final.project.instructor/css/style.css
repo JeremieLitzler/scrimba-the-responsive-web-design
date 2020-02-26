@@ -8,6 +8,9 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+}
 
 /* ==================
     Typography
@@ -21,6 +24,33 @@ h1, h2, strong {
     color: #FFE600;
 }
 
+.page-title,
+.subtitle {
+    grid-column: 2 / -2;
+    color: #000;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-bottom: .5em;
+    justify-self: center;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #FFE600;
+    margin-top: -40px;
+    margin-left: 15px;
+}
+
+.subtitle {
+    margin: .5em 0 3em;
+    font-size: 1.125rem;
+}
 
 .hero-title {
     font-size: 1.5rem;
@@ -28,10 +58,32 @@ h1, h2, strong {
     margin-bottom: 0;
 }
 
+.hero-subtitle {
+    font-size: 1.125rem;
+}
+
 .section-title {
     font-size: 1.125rem;
     color: #000;
     margin-top: 1.25em;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+    background: #FFE600;
+}
+
+.section-title-center::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title:first-child {
+    margin-top: 0;
 }
 
 /* buttons */
@@ -41,6 +93,8 @@ h1, h2, strong {
     font-weight: 700;
     margin-top: .5em;
     text-decoration: none;
+    border: 0;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -48,6 +102,16 @@ h1, h2, strong {
     color: #000;
     justify-self: start;
 }
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #ffc400;
+}
+
+.btn-form {
+    justify-self: end;
+}
+
 
 
 /* ==================
@@ -57,14 +121,130 @@ h1, h2, strong {
 .main-grid {
     display: grid;
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 2em;
 }
 
 @media (min-width: 600px) {
     .main-grid {
-        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
     }
 }
 
+/* navigation */
+
+.header {
+    background: black;
+}
+
+.header-home {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+.header-content {
+    display: flex;
+    grid-column: 2 / -2;
+}
+
+.logo-link {
+    background-color: #FFE600;
+    padding-top: 2em;
+}
+
+.nav {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    transform: translateX(0);
+    transition: transform 250ms;
+}
+
+.navigation-open {
+    transform: translateX(-100%);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #FFE600;
+}
+
+.close-nav {
+    border: 0;
+    background: 0;
+    color: #FFE600;
+    font-weight: 700;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: .5em;
+    position: absolute;
+}
+
+.open-nav {
+    border: 0;
+    background: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: .5em;
+    margin-left: auto;
+    font-size: 1.5em;
+}
+
+.current {
+    border-bottom: 1px solid #FFE600;
+}
+
+@media (min-width: 600px) {
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+    
+    .nav {
+        position: initial;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    .nav-item {
+        margin-left: 2em;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+    }
+    
+    .header-home .nav {
+        background: transparent;
+    }
+}
 
 /* footer */
 
@@ -72,6 +252,10 @@ h1, h2, strong {
     background: #ebebeb;
     padding: 4em 0;
     text-align: center;
+    
+    grid-template-areas:
+        ". social ."
+        ". main .";
 }
 
 .footer-main,
@@ -85,13 +269,17 @@ h1, h2, strong {
     opacity: .3;
 }
 
+.footer-main {
+    grid-area: main;
+}
+
 .footer-fineprint {
     font-size: .75rem;
     margin-top: 4em;
 }
 
 .social-list {
-    order: -1;
+    grid-area: social;
     list-style: none;
     padding: 0;
     margin: 0 0 2em;
@@ -109,6 +297,21 @@ h1, h2, strong {
     color: #777;
 }
 
+@media (min-width: 600px) {
+    .footer {
+        grid-template-areas: 
+          ". main main social ."
+    }
+    
+    .footer-main {
+        text-align: left;
+    }
+    
+    .social-list {
+        justify-content: flex-end;
+    }
+}
+
 /* ==================
     hero area
 ===================== */
@@ -117,7 +320,7 @@ h1, h2, strong {
     background-image: url(img/hero-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    padding: 4em 0;
+    padding: 8em 0 4em;
     color: #fff;
 }
 
@@ -125,10 +328,16 @@ h1, h2, strong {
     grid-column: 2 / -2;
 }
 
+@media (min-width: 400px) {
+    .hero > * {
+        margin-right: 20%;
+    }
+}
+
 @media (min-width: 600px) {
     
     .hero {
-        padding: 6em 0;
+        padding: 10em 0 6em;
     }
     
     .hero > * {
@@ -149,4 +358,105 @@ h1, h2, strong {
 
 .col {
     grid-column: 2 / -2;
+}
+
+@media (min-width: 600px) {
+    .col {
+        grid-column: span 1;
+    }
+    
+    .col:first-child {
+        grid-column: 2 / span 1;
+    }
+}
+
+
+/* ==================
+    template page
+===================== */
+
+.main-template {
+    padding: 4em 0;
+}
+
+.main-template > * {
+    grid-column: 2 / -2;
+}
+
+.main-image {
+    margin-bottom: 1.5em;
+    box-shadow: 5px 5px 0px black, 10px 10px 0 #FFE600;
+}
+
+@media (min-width: 600px) {
+    .main-image,
+    .secondary-text {
+        grid-column: 2;
+    }
+    
+    .main-text {
+        grid-column: 3 / span 2;
+        grid-row: span 2;
+    }
+    
+    .secondary-text {
+        order: 2;
+    }
+    
+}
+
+
+
+/* ==================
+    form
+===================== */
+
+.contact-form {
+    display: grid;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    margin-bottom: .75em;
+    padding: .4em;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+
+
+@media (min-width: 600px) {
+    .contact-form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        grid-column-gap: 1em;
+    }
+    
+    .fname-label,
+    .fname-input {
+        grid-column: 1;
+    }
+    
+    .lname-label,
+    .lname-input {
+        grid-column: 2;
+    }
+    
+    .message-label,
+    .message-textarea {
+        grid-column: span 2;
+    }
+    
+    .btn-form {
+        grid-column: 2;
+    }
+    
 }
