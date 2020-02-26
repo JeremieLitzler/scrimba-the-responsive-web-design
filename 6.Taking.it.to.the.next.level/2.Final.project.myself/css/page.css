@@ -59,15 +59,23 @@
   }
 }
 
-/* About page */
-.about-detail-title {
-  margin-top: 2em;
+/* Form */
+label {
+  font-weight: 700;
+  text-align: left;
 }
-.about-detail-title:first-child {
-  margin-top: 0;
+
+input,
+textarea {
+  font-family: inherit;
+  padding: 0.25em;
 }
-.about-detail-title .h2-title-underline-underline {
-  margin: initial;
+input {
+  margin-bottom: 2em;
+  line-height: 2em;
+}
+.submit-form {
+  font-weight: 700;
 }
 /*===================================*/
 /* End Typography */
@@ -102,20 +110,18 @@
 /* Form */
 
 form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 
-label {
-  font-weight: 700;
-}
-input {
-  margin-bottom: 2em;
-  line-height: 2em;
+textarea {
+  resize: vertical;
+  height: 100px;
 }
 
 .submit-form {
   justify-self: self-end;
+  margin-bottom: 0;
+  margin-top: 2em;
 }
 
 @media (min-width: 800px) {
@@ -125,7 +131,6 @@ input {
   .contact-primary {
     grid-column: 4 / -2;
     margin-left: 4em;
-    order: 1;
   }
 }
 

@@ -140,6 +140,7 @@ a:focus {
   background-color: #000;
 }
 
+button,
 .btn {
   border: 0;
   display: inline-block;
@@ -152,18 +153,17 @@ a:focus {
   justify-self: start;
 }
 
+button:hover,
+button:focus,
+button:active,
 .btn:hover,
 .btn:focus,
 .btn:active {
   transform: scale(1.1);
   outline: none;
   box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.1rem hsl(59, 100%, 49%);
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active {
   background-color: #000;
+  color: #ffe600;
 }
 
 /* Header */
