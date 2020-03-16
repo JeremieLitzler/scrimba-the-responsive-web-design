@@ -1,0 +1,186 @@
+/*===================================*/
+/* Must-have Typography */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  min-width: 300px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+strong,
+a {
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4em;
+}
+.fine-print {
+  font-size: 0.75rem;
+}
+/*===================================*/
+/* Interactive elements */
+
+a,
+a i {
+  transform: scale(1);
+  transition: transform 500ms;
+}
+
+a:hover,
+a:focus,
+a:active,
+a i:hover,
+a i:focus,
+a i:active {
+  transform: scale(1.1);
+}
+
+a:hover,
+a:focus {
+  color: #ffd046;
+  background-color: #241e4e;
+}
+
+button,
+.btn,
+input,
+textarea {
+  border: 0;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0.5em 1.75em;
+  margin: 1em;
+  transform: scale(1);
+  transition: transform 500ms;
+  cursor: pointer;
+  text-decoration: none;
+  justify-self: start;
+}
+
+input,
+textarea {
+  border: 1px #241e4e solid;
+}
+
+button:hover,
+button:focus,
+button:active,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: scale(1.1);
+}
+
+button:hover,
+button:focus,
+button:active,
+.btn:hover,
+.btn:focus,
+.btn:active,
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(187, 172, 41), 0 0 0 0.1rem hsl(59, 100%, 49%);
+  background-color: #241e4e;
+  color: #ffd046;
+}
+/* End - Interactive elements */
+
+.theme-color-light {
+  color: #eadaa2;
+}
+.theme-color-dark {
+  color: #241e4e;
+}
+.theme-bg-light {
+  background-color: #eadaa2;
+}
+.theme-bg-dark {
+  background-color: #241e4e;
+}
+.theme-color-accent {
+  color: #ffd046;
+}
+.theme-bg-accent {
+  background-color: #ffd046;
+}
+.theme-bb-accent {
+  border-bottom: 2px solid #ffd046;
+}
+.theme-bb-accent:hover {
+  border-bottom: 2px solid #eadaa2;
+}
+
+body {
+  color: #241e4e;
+}
+
+/* General layout */
+.main-grid {
+  display: grid;
+  /* 
+    3 columns where 
+      => col 1 size is 1em to 1fr
+      => col 2 size is 0 to 500px
+      => col 3 size is 1em to 1fr
+  */
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 800px) minmax(1em, 1fr);
+}
+
+@media (min-width: 600px) {
+  .main-grid {
+    grid-template-columns:
+      minmax(1em, 1fr)
+      /*Why 3? Because we have 3 skills !*/
+      repeat(3, minmax(145px, 320px))
+      minmax(1em, 1fr);
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+  }
+}
+
+@media (min-width: 800px) {
+  .main-grid {
+    grid-template-columns:
+      minmax(5em, 1fr)
+      repeat(6, minmax(95px, 200px))
+      minmax(5em, 1fr);
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+  }
+}
+/* End - Must-have Layout */
+/*===================================*/
+.projects h2,
+.playgrounds h2,
+article {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 800px) {
+  article {
+    grid-column: span 2;
+  }
+}
